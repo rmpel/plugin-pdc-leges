@@ -13,22 +13,16 @@ return [
 		/**
 		 * Providers specific to the admin.
 		 */
-		'admin'    => [
-			OWC\Leges\Admin\Settings\SettingsServiceProvider::class,
-		],
+		'admin'    => [],
 
 		/**
 		 * Providers specific to the network admin.
 		 */
-		'network'  => [
-
-		],
+		'network'  => [],
 
 		/**
 		 * Providers specific to the frontend.
 		 */
-		'frontend' => [
-
-		]
+		'frontend' => []
 	]
 ];
