@@ -29,8 +29,8 @@ if ( file_exists($_tests_dir . '/includes/bootstrap.php') ) {
 \WP_Mock::setUsePatchwork(true);
 \WP_Mock::bootstrap();
 
-$GLOBALS['owc-leges'] = [
-	'active_plugins' => ['owc-leges/owc-leges.php'],
+$GLOBALS['pdc-leges'] = [
+	'active_plugins' => ['pdc-leges/pdc-leges.php'],
 ];
 
 class WP_CLI

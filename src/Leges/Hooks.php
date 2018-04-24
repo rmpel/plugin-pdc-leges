@@ -11,7 +11,7 @@ class Hooks
 	public static function pluginActivation()
 	{
 		/** Add transient to allow for notice in admin */
-		set_transient('owc-leges-plugin-actions-notice', true, 5);
+		set_transient('pdc-leges-plugin-actions-notice', true, 5);
 	}
 
 	/**

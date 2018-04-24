@@ -114,8 +114,8 @@ abstract class BasePlugin
 		]);
 
 		add_action('admin_notices', function() {
-			if ( get_transient('owc-leges-plugin-actions-notice') ) {
-				delete_transient('owc-leges-plugin-actions-notice');
+			if ( get_transient('pdc-leges-plugin-actions-notice') ) {
+				delete_transient('pdc-leges-plugin-actions-notice');
 			}
 		});
 
