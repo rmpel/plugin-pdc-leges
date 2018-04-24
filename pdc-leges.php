@@ -1,11 +1,11 @@
 <?php
 /**
- * Bootstrap OWC Leges
+ * Bootstrap OWC PDC Leges
  *
  * @wordpress-plugin
- * Plugin Name:       OWC Leges
+ * Plugin Name:       OWC PDC Leges
  * Plugin URI:        https://www.yardinternet.nl
- * Description:       Core of OWC Leges
+ * Description:       Core of OWC PDC Leges
  * Version:           1.0.0
  * Author:            Edwin Siebel
  * Author URI:        https://www.yardinternet.nl/

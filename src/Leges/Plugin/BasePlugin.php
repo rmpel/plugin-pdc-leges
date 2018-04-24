@@ -42,14 +42,14 @@ abstract class BasePlugin
 	{
 		$this->rootPath = $rootPath;
 
+		$this->bootLanguages();
+
 		$this->config = new Config($this->rootPath . '/config');
 		$this->config->boot();
 
 		$this->loader = Loader::getInstance();
 
 		$this->bootServiceProviders('register');
-
-		$this->bootLanguages();
 
 		if ( is_network_admin() ) {
 			$this->bootServiceProviders('register', 'network');
@@ -115,13 +115,7 @@ abstract class BasePlugin
 
 		add_action('admin_notices', function() {
 			if ( get_transient('owc-leges-plugin-actions-notice') ) {
-				if ( ! is_plugin_active('shortcode-ui/shortcode-ui.php') ) { ?>
-					<div class="updated notice is-dismissible">
-						<p>For a nicer integration, the plugin <a href="https://wordpress.org/plugins/shortcode-ui/">Shortcake (Shortcode
-								UI)</a> is recommended!</a></p>
-					</div>
-					<?php delete_transient('owc-leges-plugin-actions-notice');
-				}
+				delete_transient('owc-leges-plugin-actions-notice');
 			}
 		});
 
@@ -191,9 +185,9 @@ abstract class BasePlugin
 	private function bootLanguages()
 	{
 		load_plugin_textdomain(
-			'owc-leges',
+			$this->getName(),
 			false,
-			dirname(dirname(plugin_basename(__FILE__))) . '/languages/'
+			$this->getName() . '/languages/'
 		);
 	}
 

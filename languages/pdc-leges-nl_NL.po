@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Config Expander\n"
+"POT-Creation-Date: 2018-04-24 15:13+0200\n"
+"PO-Revision-Date: 2018-04-24 15:13+0200\n"
+"Last-Translator: Edwin Siebel <edwin@studiojoyo.com>\n"
+"Language-Team: Edwin Siebel <edwin@yard.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: src/Leges/vendor\n"
+
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:220
+msgid "New price"
+msgstr "Nieuw bedrag"
+
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:224
+msgid "Price"
+msgstr "Bedrag"
+
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:228
+#: src/Leges/Metabox/MetaboxServiceProvider.php:50
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:79
+msgid "Date new lege active"
+msgstr "Datum actief nieuwe lege"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:30
+msgid "Lege settings"
+msgstr "Lege instellingen"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:38
+msgid "Lege price"
+msgstr "Lege prijs"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:39
+#: src/Leges/Metabox/MetaboxServiceProvider.php:45
+msgid "Price in &euro;"
+msgstr "Prijs in &euro;"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:44
+msgid "Lege new price"
+msgstr "Lege nieuw bedrag"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:53
+msgid "dd-mm-yy"
+msgstr "dd-mm-yy"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:60
+msgid "(dd-mm-yy)"
+msgstr "(dd-mm-yy)"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:38
+msgctxt "post type general name"
+msgid "Leges"
+msgstr "Leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:39
+msgctxt "post type singular name"
+msgid "Lege"
+msgstr "Lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:40
+msgctxt "admin menu"
+msgid "Leges"
+msgstr "Leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:41
+msgctxt "add new on admin bar"
+msgid "Leges"
+msgstr "Leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:42
+msgctxt "lege"
+msgid "Add new lege"
+msgstr "Voeg nieuwe lege toe"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:43
+msgid "Add new Lege"
+msgstr "Voeg nieuwe lege toe"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:44
+msgid "New lege"
+msgstr "Nieuwe lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:45
+msgid "Edit Lege"
+msgstr "Bewerk lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:46
+msgid "View lege"
+msgstr "Bekijk lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:47
+msgid "All leges"
+msgstr "Alle leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:48
+msgid "Search leges"
+msgstr "Zoek leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:49
+msgid "Parent leges:"
+msgstr "Hoofd lege pagain:"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:50
+msgid "No leges found."
+msgstr "Geen leges gevonden."
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:51
+msgid "No leges found in Trash."
+msgstr "Geen leges gevonden in prullenbak."
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:56
+msgid "Leges"
+msgstr "Leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:71
+msgid "Lege price (in &euro;)"
+msgstr "Lege prijs (in &euro;)"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:75
+msgid "Lege new price (in &euro;)"
+msgstr "Nieuwe lege prijs (in &euro;)"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:84
+msgid "Lege shortcode"
+msgstr "Lege shortcode"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:90
+msgid "Published"
+msgstr "Gepubliceerd"
+
+#~ msgctxt "add new on admin bar"
+#~ msgid "Lege"
+#~ msgstr "Lege"
+
+#~ msgid "This link does not work, go to our website: <a href=\"%s\">%s</a>"
+#~ msgstr "Deze link werkt niet, bekijk onze website: <a href=\"%s\">%s</a>"
