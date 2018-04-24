@@ -24,11 +24,16 @@ class Plugin extends BasePlugin
 
 	/**
 	 * Boot the plugin.
-	 * @throws \Exception
+	 * Called on plugins_loaded event
 	 */
 	public function boot()
 	{
+		$this->config->setPluginName(self::NAME);
+		$this->config->setFilterExceptions(['core']);
+		$this->config->boot();
 
+		$this->loader->addAction('init', $this->config, 'filter', 9);
+		$this->loader->register();
 	}
 
 	/**

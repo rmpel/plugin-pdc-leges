@@ -44,10 +44,9 @@ abstract class BasePlugin
 
 		$this->bootLanguages();
 
-		$this->config = new Config($this->rootPath . '/config');
-		$this->config->boot();
-
 		$this->loader = Loader::getInstance();
+
+		$this->config = new Config($this->rootPath . '/config');
 
 		$this->bootServiceProviders('register');
 
