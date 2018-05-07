@@ -34,19 +34,8 @@ class QuickEditServiceProvider extends ServiceProvider
 
 		$this->plugin->loader->addAction('quick_edit_custom_box', $this, 'registerQuickEditHandler', 10, 2);
 		$this->plugin->loader->addAction('save_post', $this, 'registerSavePostHandler', 10, 2);
-		$this->plugin->loader->addAction('admin_footer', $this, 'printFooterScript', 10, 1);
+		$this->plugin->loader->addAction('admin_footer', $this, 'renderFooterScript', 10, 1);
 		$this->plugin->loader->addFilter('post_row_actions', $this, 'addRowActions', 10, 2);
-		$this->plugin->loader->addAction('admin_enqueue_scripts', $this, 'register_admin_scripts');
-		$this->plugin->loader->addAction('admin_head-edit.php', $this, 'removeUnneccesaryQuickEdits');
-	}
-
-	/**
-	 * Registers and enqueues admin-specific JavaScript.
-	 */
-	public function register_admin_scripts()
-	{
-		wp_enqueue_style('jquery-ui-datepicker', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css');
-		wp_enqueue_script('jquery-ui-datepicker');
 	}
 
 	/**
@@ -73,9 +62,9 @@ class QuickEditServiceProvider extends ServiceProvider
 	}
 
 	/**
-	 *
+	 * Render javascript inline for admin only.
 	 */
-	public function printFooterScript()
+	public function renderFooterScript()
 	{
 		$current_screen = get_current_screen();
 		if ( $current_screen->id !== 'edit-' . $this->postType || $current_screen->post_type !== $this->postType ) {
@@ -84,11 +73,18 @@ class QuickEditServiceProvider extends ServiceProvider
 
 		// Ensure jQuery library loads
 		wp_enqueue_script('jquery');
+		wp_enqueue_style('jquery-ui-datepicker', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css');
+		wp_enqueue_script('jquery-ui-datepicker');
 		?>
 		<script type="text/javascript">
 			jQuery(function ($) {
-
 				$(function () {
+					$('input[name="post_password"]').each(function (i) {
+					$(this).parent().parent().parent().remove();
+					});
+					$('input[name="post_name"]').each(function (i) {
+						$(this).parent().parent().remove();
+					});
 					$('#_pdc-lege-active-date').datepicker({
 						altField: "#_pdc-lege-active-date",
 						dateFormat: 'dd-mm-yy',
@@ -102,12 +98,13 @@ class QuickEditServiceProvider extends ServiceProvider
 				$('#the-list').on('click', 'a.editinline', function (e) {
 					e.preventDefault();
 					inlineEditPost.revert();
-					<?php foreach( $this->quickEditHandlers as $key => $handler ) { ?>
-					var value = $(this).data('<?php echo $key; ?>');
-					$('#<?php echo $handler['metaboxKey']; ?>').val(value ? value : '');
+					<?php foreach ( $this->quickEditHandlers as $key => $handler ) { ?>
+						var value = $(this).data('<?php echo $key; ?>');
+						$('#<?php echo $handler['metaboxKey']; ?>').val(value ? value : '');
 					<?php } ?>
 				});
 			});
+
 		</script>
 		<?php
 	}
@@ -151,7 +148,7 @@ class QuickEditServiceProvider extends ServiceProvider
 	{
 		$value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
 		<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
-			<span class="title"><?php echo $item['label']; ?></span>
+			<span class="title"><?php echo __($item['label'], 'pdc-leges'); ?></span>
 			<span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
 		</label>
 		<?php
@@ -164,7 +161,7 @@ class QuickEditServiceProvider extends ServiceProvider
 	{
 		$value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
 		<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
-			<span class="title"><?php echo $item['label']; ?></span>
+			<span class="title"><?php echo __($item['label'], 'pdc-leges'); ?></span>
 			<span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
 		</label>
 		<?php
@@ -177,33 +174,9 @@ class QuickEditServiceProvider extends ServiceProvider
 	{
 		$value = get_post_meta(get_the_ID(), $item['metaboxKey'], true); ?>
 		<label class="aligncenter" for="<?php echo $item['metaboxKey']; ?>">
-			<span class="title"><?php echo $item['label']; ?></span>
+			<span class="title"><?php echo __($item['label'], 'pdc-leges'); ?></span>
 			<span class="input-text-wrap"><input type="text" id="<?php echo $item['metaboxKey']; ?>" name="<?php echo $item['metaboxKey']; ?>" value="<?php echo $value; ?>"></span>
 		</label>
-		<?php
-	}
-
-	/**
-	 * @return void
-	 */
-	public function removeUnneccesaryQuickEdits()
-	{
-
-		$current_screen = get_current_screen();
-		if ( $current_screen->id != 'edit-' . $this->postType || $current_screen->post_type != $this->postType ) {
-			return;
-		}
-		?>
-		<script type="text/javascript">
-			jQuery(document).ready(function ($) {
-				$('input[name="post_password"]').each(function (i) {
-					$(this).parent().parent().parent().remove();
-				});
-				$('input[name="post_name"]').each(function (i) {
-					$(this).parent().parent().remove();
-				});
-			});
-		</script>
 		<?php
 	}
 
@@ -217,15 +190,15 @@ class QuickEditServiceProvider extends ServiceProvider
 		return [
 			'new-price'   => [
 				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'new-price'),
-				'label'      => __('New price', 'pdc-lege')
+				'label'      => __('New price', 'pdc-leges')
 			],
 			'price'       => [
 				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'price'),
-				'label'      => __('Price', 'pdc-lege')
+				'label'      => __('Price', 'pdc-leges')
 			],
 			'active-date' => [
 				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'active-date'),
-				'label'      => __('Date new lege active', 'pdc-lege')
+				'label'      => __('Date new lege active', 'pdc-leges')
 			]
 		];
 	}

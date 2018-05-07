@@ -3,7 +3,7 @@
 namespace OWC\Leges\Plugin;
 
 use Exception;
-use OWC\Leges\Config;
+use OWC_PDC_Base\Core\Config;
 
 abstract class BasePlugin
 {
@@ -18,7 +18,7 @@ abstract class BasePlugin
 	/**
 	 * Instance of the configuration repository.
 	 *
-	 * @var \OWC\Leges\Config
+	 * @var \OWC_PDC_Base\Core\Config
 	 */
 	public $config;
 
@@ -41,29 +41,11 @@ abstract class BasePlugin
 	public function __construct($rootPath)
 	{
 		$this->rootPath = $rootPath;
-
-		$this->bootLanguages();
+		$this->loadPluginTextdomain();
 
 		$this->loader = Loader::getInstance();
 
 		$this->config = new Config($this->rootPath . '/config');
-
-		$this->bootServiceProviders('register');
-
-		if ( is_network_admin() ) {
-			$this->bootServiceProviders('register', 'network');
-		}
-
-		$this->bootServiceProviders('register', is_admin() ? 'admin' : 'frontend');
-
-		$this->bootServiceProviders('boot');
-		if ( is_network_admin() ) {
-			$this->bootServiceProviders('boot', 'network');
-		}
-
-		$this->bootServiceProviders('boot', is_admin() ? 'admin' : 'frontend');
-
-		$this->loader->register();
 	}
 
 	/**
@@ -74,10 +56,14 @@ abstract class BasePlugin
 	 *
 	 * @throws Exception
 	 */
-	private function bootServiceProviders($method = '', $location = '')
+	public function bootServiceProviders($method = '', $location = '')
 	{
 		$suffix   = $location ? '.' . $location : '';
 		$services = $this->config->get('core.providers' . $suffix);
+
+		if ( empty($services) ) {
+			return;
+		}
 
 		foreach ( $services as $service ) {
 			// Only boot global service providers here.
@@ -181,12 +167,12 @@ abstract class BasePlugin
 	/**
 	 * Add language file.
 	 */
-	private function bootLanguages()
+	private function loadPluginTextdomain()
 	{
 		load_plugin_textdomain(
 			$this->getName(),
 			false,
-			$this->getName() . '/languages/'
+			$this->getName() . '/languages'
 		);
 	}
 
@@ -200,4 +186,11 @@ abstract class BasePlugin
 		return $this->rootPath;
 	}
 
+	/**
+	 *
+	 */
+	public function filterPlugin()
+	{
+		do_action('owc/' . $this->getName() . '/plugin', $this);
+	}
 }

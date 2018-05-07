@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PDC Leges\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-24 13:34+0200\n"
+"POT-Creation-Date: 2018-05-07 15:57+0200\n"
 "POT-Revision-Date: Fri Nov 27 2015 13:26:26 GMT+0100 (W. Europe Standard Time)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -25,145 +25,123 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: ../node_modules\n"
 "X-Poedit-SearchPathExcluded-2: ../vendor\n"
 
-#: Leges/Admin/QuickEdit/QuickEditServiceProvider.php:220
+#: Leges/Admin/QuickEdit/QuickEditServiceProvider.php:193
 msgid "New price"
 msgstr ""
 
-#: Leges/Admin/QuickEdit/QuickEditServiceProvider.php:224
+#: Leges/Admin/QuickEdit/QuickEditServiceProvider.php:197
 msgid "Price"
 msgstr ""
 
-#: Leges/Admin/QuickEdit/QuickEditServiceProvider.php:228
-#: Leges/Metabox/MetaboxServiceProvider.php:50
-#: Leges/PostType/LegesPostTypeServiceProvider.php:79
+#: Leges/Admin/QuickEdit/QuickEditServiceProvider.php:201
+#: Leges/Metabox/MetaboxServiceProvider.php:51
+#: Leges/PostType/LegesPostTypeServiceProvider.php:83
 msgid "Date new lege active"
 msgstr ""
 
-#: Leges/Admin/Settings/SettingsServiceProvider.php:34
-#: Leges/Admin/Settings/SettingsServiceProvider.php:51
-msgid "Leges"
-msgstr ""
-
-#: Leges/Admin/Settings/SettingsServiceProvider.php:58
-msgid "Instance url"
-msgstr ""
-
-#: Leges/Admin/Settings/SettingsServiceProvider.php:59
-#: Leges/Admin/Settings/SettingsServiceProvider.php:65
-msgid "URL inclusief http(s)://"
-msgstr ""
-
-#: Leges/Admin/Settings/SettingsServiceProvider.php:64
-msgid "Instance shield"
-msgstr ""
-
-#: Leges/Admin/Settings/SettingsServiceProvider.php:70
-msgid "Instance prefix"
-msgstr ""
-
-#: Leges/Metabox/MetaboxServiceProvider.php:30
+#: Leges/Metabox/MetaboxServiceProvider.php:31
 msgid "Lege settings"
 msgstr ""
 
-#: Leges/Metabox/MetaboxServiceProvider.php:38
+#: Leges/Metabox/MetaboxServiceProvider.php:39
 msgid "Lege price"
 msgstr ""
 
-#: Leges/Metabox/MetaboxServiceProvider.php:39
-#: Leges/Metabox/MetaboxServiceProvider.php:45
+#: Leges/Metabox/MetaboxServiceProvider.php:40
+#: Leges/Metabox/MetaboxServiceProvider.php:46
 msgid "Price in &euro;"
 msgstr ""
 
-#: Leges/Metabox/MetaboxServiceProvider.php:44
+#: Leges/Metabox/MetaboxServiceProvider.php:45
 msgid "Lege new price"
 msgstr ""
 
-#: Leges/Metabox/MetaboxServiceProvider.php:53
+#: Leges/Metabox/MetaboxServiceProvider.php:54
 msgid "dd-mm-yy"
 msgstr ""
 
-#: Leges/Metabox/MetaboxServiceProvider.php:60
+#: Leges/Metabox/MetaboxServiceProvider.php:61
 msgid "(dd-mm-yy)"
 msgstr ""
 
-#: Leges/PostType/LegesPostTypeServiceProvider.php:37
-msgctxt "post type general name"
-msgid "Leges"
-msgstr ""
-
-#: Leges/PostType/LegesPostTypeServiceProvider.php:38
-msgctxt "post type singular name"
-msgid "Lege"
-msgstr ""
-
-#: Leges/PostType/LegesPostTypeServiceProvider.php:39
-msgctxt "admin menu"
-msgid "Leges"
-msgstr ""
-
-#: Leges/PostType/LegesPostTypeServiceProvider.php:40
-msgctxt "add new on admin bar"
-msgid "Lege"
-msgstr ""
-
-#: Leges/PostType/LegesPostTypeServiceProvider.php:41
-msgctxt "lege"
-msgid "Add new lege"
-msgstr ""
-
 #: Leges/PostType/LegesPostTypeServiceProvider.php:42
-msgid "Add new Lege"
+msgctxt "post type general name"
+msgid "PDC leges"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:43
-msgid "New lege"
+msgctxt "post type singular name"
+msgid "PDC lege"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:44
-msgid "Edit Lege"
+msgctxt "admin menu"
+msgid "PDC leges"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:45
-msgid "View lege"
+msgctxt "add new on admin bar"
+msgid "PDC leges"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:46
-msgid "All leges"
+msgctxt "lege"
+msgid "Add new pdc lege"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:47
-msgid "Search leges"
+msgid "Add new pdc Lege"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:48
-msgid "Parent leges:"
+msgid "New PDC lege"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:49
-msgid "No leges found."
+msgid "Edit PDC lege"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:50
-msgid "No leges found in Trash."
+msgid "View PDC lege"
+msgstr ""
+
+#: Leges/PostType/LegesPostTypeServiceProvider.php:51
+msgid "All PDC leges"
+msgstr ""
+
+#: Leges/PostType/LegesPostTypeServiceProvider.php:52
+msgid "Search PDC leges"
+msgstr ""
+
+#: Leges/PostType/LegesPostTypeServiceProvider.php:53
+msgid "Parent PDC leges:"
+msgstr ""
+
+#: Leges/PostType/LegesPostTypeServiceProvider.php:54
+msgid "No PDC leges found."
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:55
-msgid "Description."
+msgid "No PDC leges found in Trash."
 msgstr ""
 
-#: Leges/PostType/LegesPostTypeServiceProvider.php:71
-msgid "Lege price (in &euro;)"
+#: Leges/PostType/LegesPostTypeServiceProvider.php:60
+msgid "PDC leges"
 msgstr ""
 
 #: Leges/PostType/LegesPostTypeServiceProvider.php:75
+msgid "Lege price (in &euro;)"
+msgstr ""
+
+#: Leges/PostType/LegesPostTypeServiceProvider.php:79
 msgid "Lege new price (in &euro;)"
 msgstr ""
 
-#: Leges/PostType/LegesPostTypeServiceProvider.php:84
+#: Leges/PostType/LegesPostTypeServiceProvider.php:88
 msgid "Lege shortcode"
 msgstr ""
 
-#: Leges/PostType/LegesPostTypeServiceProvider.php:90
+#: Leges/PostType/LegesPostTypeServiceProvider.php:94
 msgid "Published"
 msgstr ""
 

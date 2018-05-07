@@ -91,3 +91,5 @@ bower_components
 *.map
 
 vendor
+
+tests/coverage
