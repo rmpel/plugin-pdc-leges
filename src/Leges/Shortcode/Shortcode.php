@@ -65,7 +65,7 @@ class Shortcode
 	 */
 	protected function postExists($id)
 	{
-		return is_string(get_post_status($id));
+		return get_post_status($id);
 	}
 
 	/**

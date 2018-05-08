@@ -9,8 +9,6 @@ class MetaboxServiceProvider extends ServiceProvider
 
 	public function register()
 	{
-
-		$this->plugin->loader->addFilter('rwmb_meta_boxes', $this, 'registerMetaboxes', 10, 1);
 		$this->plugin->loader->addFilter('rwmb_meta_boxes', $this, 'registerMetaboxes', 10, 1);
 	}
 

@@ -98,6 +98,6 @@ class LegesPostTypeServiceProvider extends ServiceProvider
 			],
 		];
 
-		register_extended_post_type($this->postType, $args, $labels);
+		return register_extended_post_type($this->postType, $args, $labels);
 	}
 }

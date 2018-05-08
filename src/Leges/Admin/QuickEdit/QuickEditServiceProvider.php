@@ -30,7 +30,7 @@ class QuickEditServiceProvider extends ServiceProvider
 	public function register()
 	{
 
-		$this->quickEditHandlers = $this->setQuickEditHandlers();
+		$this->setQuickEditHandlers();
 
 		$this->plugin->loader->addAction('quick_edit_custom_box', $this, 'registerQuickEditHandler', 10, 2);
 		$this->plugin->loader->addAction('save_post', $this, 'registerSavePostHandler', 10, 2);
@@ -39,22 +39,23 @@ class QuickEditServiceProvider extends ServiceProvider
 	}
 
 	/**
-	 * @param $actions
-	 * @param $post
+	 * @param array $actions
+	 * @param       $post
 	 *
 	 * @return mixed
 	 */
-	public function addRowActions($actions, $post)
+	public function addRowActions(array $actions, $post): array
 	{
-
-		foreach ( $this->quickEditHandlers as $key => $handler ) {
+		foreach ( $this->getQuickEditHandlers() as $key => $handler ) {
 			$foundValue = get_post_meta($post->ID, $handler['metaboxKey'], true);
 
-			if ( $foundValue ) {
-				if ( isset($actions['inline hide-if-no-js']) ) {
-					$new_attribute                   = sprintf('data-%s="%s"', esc_attr($key), esc_attr($foundValue));
-					$actions['inline hide-if-no-js'] = str_replace('class=', "$new_attribute class=", $actions['inline hide-if-no-js']);
-				}
+			if ( ! $foundValue ) {
+				continue;
+			}
+
+			if ( isset($actions['inline hide-if-no-js']) ) {
+				$newAttribute                    = sprintf('data-%s="%s"', esc_attr($key), esc_attr($foundValue));
+				$actions['inline hide-if-no-js'] = str_replace('class=', "$newAttribute class=", $actions['inline hide-if-no-js']);
 			}
 		}
 
@@ -104,6 +105,13 @@ class QuickEditServiceProvider extends ServiceProvider
 					<?php } ?>
 				});
 			});
+
+
+
+
+
+
+
 
 		</script>
 		<?php
@@ -185,9 +193,9 @@ class QuickEditServiceProvider extends ServiceProvider
 	 *
 	 * @return array
 	 */
-	private function setQuickEditHandlers()
+	public function setQuickEditHandlers()
 	{
-		return [
+		return $this->quickEditHandlers = [
 			'new-price'   => [
 				'metaboxKey' => sprintf('%s-%s', $this->prefix, 'new-price'),
 				'label'      => __('New price', 'pdc-leges')
@@ -209,8 +217,12 @@ class QuickEditServiceProvider extends ServiceProvider
 	 */
 	public function registerSavePostHandler($post_id, $post)
 	{
-		// if called by autosave, then bail here
-		if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) {
+
+		if ( wp_is_post_revision($post_id) ) {
+			return;
+		}
+
+		if ( wp_is_post_autosave($post_id) ) {
 			return;
 		}
 
@@ -224,11 +236,19 @@ class QuickEditServiceProvider extends ServiceProvider
 			return;
 		}
 
-		foreach ( $this->quickEditHandlers as $key => $handler ) {
+		foreach ( $this->getQuickEditHandlers() as $key => $handler ) {
 			// update!
 			if ( isset($_POST["{$this->prefix}-{$key}"]) ) {
 				update_post_meta($post_id, "{$this->prefix}-{$key}", $_POST["{$this->prefix}-{$key}"]);
 			}
 		}
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getQuickEditHandlers()
+	{
+		return $this->quickEditHandlers;
 	}
 }

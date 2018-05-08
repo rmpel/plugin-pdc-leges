@@ -19,7 +19,6 @@ class ShortcodeServiceProvider extends ServiceProvider
 	{
 		$shortcode = new Shortcode();
 		add_shortcode(self::$shortcode, [$shortcode, 'addShortcode']);
-
 	}
 
 	/**
