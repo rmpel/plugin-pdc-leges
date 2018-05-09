@@ -9,7 +9,6 @@ pipelines:
           - composer
           - vendor-directory
         script:
-          - mkdir ~/.ssh
           - echo $PDC_BASE_SSH_KEY > ~/.ssh/id_rsa.tmp # note: assumes base64 encoded ssh key without a passphrase
           - base64 -d ~/.ssh/id_rsa.tmp > ~/.ssh/id_rsa
           - chmod 600 ~/.ssh/id_rsa
