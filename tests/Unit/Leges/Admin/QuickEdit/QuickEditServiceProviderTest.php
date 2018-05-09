@@ -4,8 +4,8 @@ namespace OWC\PDC\Leges\Tests\Admin\QuickEdit;
 
 use Mockery as m;
 use OWC\PDC\Base\Foundation\Config;
-use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Base\Foundation\Plugin;
+use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Leges\Admin\QuickEdit\QuickEditServiceProvider;
 use OWC\PDC\Leges\Tests\Unit\TestCase;
 use StdClass;

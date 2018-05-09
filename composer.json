@@ -1,6 +1,6 @@
 {
-  "name": "plugin/pdcs-leges",
-  "description": "PDC Leges",
+  "name": "plugin/pdc-leges",
+  "description": "PDC Leges Plugin",
   "authors": [
     {
       "name": "Yard Internet",
@@ -9,8 +9,15 @@
     }
   ],
   "type": "wordpress-plugin",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:openwebconcept/plugin-pdc-base.git"
+    }
+  ],
   "require": {
-    "php": ">=7.0"
+    "php": ">=7.0",
+    "plugin/pdc-base": "dev-feat-namespace"
   },
   "require-dev": {
     "mockery/mockery": "1.0.*",

@@ -55,17 +55,7 @@ class LegesPostTypeServiceProviderTest extends TestCase
 
 		$this->assertTrue(true);
 	}
-
-	/** @test */
-	public function it_throws_an_exception_if_function_does_not_exist()
-	{
-
-		$this->expectException(\Exception::class);
-		$this->expectExceptionMessage('function register_extended_post_type must be registered.');
-
-		$this->service->registerPostType();
-	}
-
+	
 	/** @test */
 	public function it_throws_an_exception_if_function_does_exist()
 	{
