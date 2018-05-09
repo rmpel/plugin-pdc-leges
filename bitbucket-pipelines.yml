@@ -9,6 +9,8 @@ pipelines:
           - composer
           - vendor-directory
         script:
+          - apt-get update -y
+          - apt-get install -y git
           - composer install --no-interaction --no-progress --prefer-dist --ignore-platform-reqs
           - ./vendor/bin/phpunit --testsuite "Unit Test"
     - step:
