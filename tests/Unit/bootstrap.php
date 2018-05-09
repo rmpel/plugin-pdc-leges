@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPUnit bootstrap file
  */
@@ -7,6 +8,8 @@
  * Load dependencies with Composer autoloader.
  */
 require __DIR__ . '/../../vendor/autoload.php';
+
+define('WP_PLUGIN_DIR', __DIR__);
 
 /**
  * Bootstrap WordPress Mock.

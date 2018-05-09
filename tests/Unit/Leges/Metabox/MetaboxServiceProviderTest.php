@@ -7,7 +7,7 @@ use OWC\PDC\Base\Foundation\Config;
 use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Leges\Metabox\MetaboxServiceProvider;
-use OWC\PDC\Leges\Tests\TestCase;
+use OWC\PDC\Leges\Tests\Unit\TestCase;
 use WP_Mock;
 
 class MetaboxServiceProviderTest extends TestCase

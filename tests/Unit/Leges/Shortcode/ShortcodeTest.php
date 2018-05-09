@@ -3,8 +3,8 @@
 namespace OWC\PDC\Leges\Tests\Config;
 
 use Mockery as m;
-use OWC\PDC\Leges\Plugin\BasePlugin;
-use OWC\PDC\Leges\Plugin\Loader;
+use OWC\PDC\Base\Foundation\Loader;
+use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Leges\Shortcode\Shortcode;
 use OWC\PDC\Leges\Tests\Unit\TestCase;
 use OWC\PDC\Base\Foundation\Config;
@@ -38,7 +38,7 @@ class TestShortcode extends TestCase
 
 		$this->config = m::mock(Config::class);
 
-		$this->plugin         = m::mock(BasePlugin::class);
+		$this->plugin         = m::mock(Plugin::class);
 		$this->plugin->config = $this->config;
 		$this->plugin->loader = m::mock(Loader::class);
 

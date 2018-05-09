@@ -1,13 +1,13 @@
 <?php
 
-namespace OWC\PDC\Leges\Test\Admin\QuickEdit;
+namespace OWC\PDC\Leges\Tests\Admin\QuickEdit;
 
 use Mockery as m;
 use OWC\PDC\Base\Foundation\Config;
 use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Leges\Admin\QuickEdit\QuickEditServiceProvider;
-use OWC\PDC\Leges\Unit\Tests\TestCase;
+use OWC\PDC\Leges\Tests\Unit\TestCase;
 use StdClass;
 use WP_Mock;
 

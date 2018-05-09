@@ -3,12 +3,12 @@
 namespace OWC\PDC\Leges\Tests\Config;
 
 use Mockery as m;
-use OWC\PDC\Leges\Plugin\BasePlugin;
-use OWC\PDC\Leges\Plugin\Loader;
+use OWC\PDC\Base\Foundation\Config;
+use OWC\PDC\Base\Foundation\Loader;
+use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Leges\Shortcode\Shortcode;
 use OWC\PDC\Leges\Shortcode\ShortcodeServiceProvider;
-use OWC\PDC\Leges\Tests\TestCase;
-use OWC\PDC\Base\Foundation\Config;
+use OWC\PDC\Leges\Tests\Unit\TestCase;
 
 class ShortcodeServiceProviderTest extends TestCase
 {
@@ -50,7 +50,7 @@ class ShortcodeServiceProviderTest extends TestCase
 		\WP_Mock::setUp();
 
 		$this->config         = m::mock(Config::class);
-		$this->plugin         = m::mock(BasePlugin::class);
+		$this->plugin         = m::mock(Plugin::class);
 		$this->plugin->config = $this->config;
 		$this->plugin->loader = m::mock(Loader::class);
 

@@ -8,7 +8,7 @@ use OWC\PDC\Base\Foundation\Config;
 use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Leges\PostType\LegesPostTypeServiceProvider;
-use OWC\PDC\Leges\Tests\TestCase;
+use OWC\PDC\Leges\Tests\Unit\TestCase;
 use WP_Mock;
 
 class LegesPostTypeServiceProviderTest extends TestCase
