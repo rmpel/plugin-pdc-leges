@@ -1,8 +1,8 @@
 <?php
 
-namespace OWC\Leges;
+namespace OWC\PDC\Leges;
 
-use OWC\Leges\Plugin\BasePlugin;
+use OWC\PDC\Leges\Plugin\BasePlugin;
 
 class Plugin extends BasePlugin
 {
@@ -12,7 +12,7 @@ class Plugin extends BasePlugin
 	 *
 	 * @var string
 	 */
-	const NAME = 'owc-leges';
+	const NAME = 'pdc-leges';
 
 	/**
 	 * Version of the plugin.
@@ -24,21 +24,23 @@ class Plugin extends BasePlugin
 
 	/**
 	 * Boot the plugin.
-	 * @throws \Exception
+	 * Called on plugins_loaded event
 	 */
 	public function boot()
 	{
+		$this->config->setProtectedNodes(['core']);
+		$this->config->boot();
 
+		$this->bootServiceProviders('register');
+
+		$this->bootServiceProviders('register', is_admin() ? 'admin' : 'frontend');
+
+		$this->bootServiceProviders('boot');
+
+		$this->bootServiceProviders('boot', is_admin() ? 'admin' : 'frontend');
+
+		$this->loader->addAction('init', $this, 'filterPlugin', 9);
+
+		$this->loader->register();
 	}
-
-	/**
-	 * Get settings from config file, and allow to hook into it.
-	 *
-	 * @return array
-	 */
-	public function getSettings()
-	{
-		return $this->config->get('core.settings');
-	}
-
 }

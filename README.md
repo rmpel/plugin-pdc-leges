@@ -1,39 +1,76 @@
-# OWC Elasticsearch
+# OWC Leges
 
 ## Setup
-Add your elasticsearch instance config to the settings tab of the PDC base plugin.
+Add leges to the repository, and allows to insert them where needed in the PDC item.
 
-### Filters
+### How do I get set up? ###
+
+* Unzip and/or move all files to the /wp-content/plugins/pdc-leges directory
+* Log into WordPress admin and activate the ‘PDC Leges’ plugin through the ‘Plugins’ menu
+
+### Filters & Actions
 
 There are various [hooks](https://codex.wordpress.org/Plugin_API/Hooks), which allows for changing the output.
 
-##### Filters the settings array.
-
-Allow the settings array to be altered.
+##### Action for changing main Plugin object.
 ```php
-owc/elasticsearch/elasticpress/settings
+'owc/pdc-leges/plugin'
 ```
 
-Allow the postargs meta array to be altered.
-This postArgs will be sent to the Elasticsearch instance.
+See OWC_PDC_FAQ\Core\Config->set method for a way to change this plugins config.
+
+Via the plugin object the following config settings can be adjusted
+- metaboxes
+- rest_api_fields
+
+
+##### Filter the format of the shortcode output
 ```php
-owc/elasticsearch/elasticpress/postargs/meta
+owc/pdc/leges/shortcode/format
 ```
 
-Allow the postargs terms array to be altered.
-This postArgs will be sent to the Elasticsearch instance.
+##### Filter the output of the shortcode output
 ```php
-owc/elasticsearch/elasticpress/postargs/terms
+owc/pdc/leges/shortcode/after-format
 ```
 
-Allow the post_author be inserted in the postArgs.
-This postArgs will be sent to the Elasticsearch instance.
-```php
-owc/elasticsearch/elasticpress/postargs/remote-author
+### Translations ###
+
+If you want to use your own set of labels/names/descriptions and so on you can do so.
+All text output in this plugin is controlled via the gettext methods.
+
+Please use your preferred way to make your own translations from the /wp-content/plugins/pdc-leges/languages/pdc-leges.pot file
+
+Be careful not to put the translation files in a location which can be overwritten by a subsequent update of the plugin, theme or WordPress core.
+
+We recommend using the 'Loco Translate' plugin.
+https://wordpress.org/plugins/loco-translate/
+
+This plugin provides an easy interface for custom translations and a way to store these files without them getting overwritten by updates.
+
+For instructions how to use the 'Loco Translate' plugin, we advice you to read the Beginners's guide page on their website: https://localise.biz/wordpress/plugin/beginners
+or start at the homepage: https://localise.biz/wordpress/plugin
+
+### Running tests ###
+To run the Unit tests go to a command-line.
+```bash
+cd /path/to/wordpress/htdocs/wp-content/plugins/pdc-leges/
+composer install
+phpunit
 ```
 
-Allow the postargs array to be altered.
-This postArgs will be sent to the Elasticsearch instance.
-```php
-owc/elasticsearch/elasticpress/postargs/all
+For code coverage report, generate report with command line command and view results with browser.
+```bash
+phpunit --coverage-html ./tests/coverage
 ```
+
+### Contribution guidelines ###
+
+##### Writing tests
+Have a look at the code coverage reports to see where more coverage can be obtained.
+Write tests
+Create a Pull request to the OWC repository
+
+### Who do I talk to? ###
+
+If you have questions about or suggestions for this plugin, please contact <a href="mailto:hpeters@Buren.nl">Holger Peters</a> from Gemeente Buren.

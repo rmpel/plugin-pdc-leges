@@ -1,30 +1,39 @@
 {
-  "name": "plugin/owc-leges",
-  "description": "OWC Leges",
-  "homepage": "https://www.yardinternet.nl",
+  "name": "plugin/pdc-leges",
+  "description": "PDC Leges Plugin",
   "authors": [
     {
       "name": "Yard Internet",
-      "email": "info@yard.nl"
+      "email": "info@yard.nl",
+      "homepage": "https://www.yardinternet.nl"
     }
   ],
   "type": "wordpress-plugin",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:openwebconcept/plugin-pdc-base.git"
+    }
+  ],
   "require": {
+    "php": ">=7.0",
+    "plugin/pdc-base": "dev-feat-namespace"
   },
   "require-dev": {
-    "mockery/mockery": "~1.0",
+    "mockery/mockery": "1.0.*",
     "phpunit/phpunit": "~6.0",
-    "10up/wp_mock": "dev-master"
+    "10up/wp_mock": "dev-master",
+    "phpmd/phpmd": "@stable"
   },
   "autoload-dev": {
     "psr-4": {
-      "OWC\\Leges\\": "./src/Leges",
-      "OWC\\Leges\\Tests\\": "./tests"
+      "OWC\\PDC\\Leges\\": "./src/Leges",
+      "OWC\\PDC\\Leges\\Tests\\": "./tests"
     }
   },
   "scripts": {
     "unit": "clear && ./vendor/bin/phpunit  --testsuite 'Unit Test' --colors=always",
-    "unit-cover": "clear && ./vendor/bin/phpunit  --testsuite 'Unit Test' --colors=always --coverage-html ./tests/coverage",
+    "unit-coverage": "clear && ./vendor/bin/phpunit  --testsuite 'Unit Test' --colors=always --coverage-html ./tests/coverage",
     "integration": "clear && ./vendor/bin/phpunit  --testsuite 'Integration Test' --colors=always",
     "test": [
       "@unit",

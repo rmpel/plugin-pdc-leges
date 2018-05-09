@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Config Expander\n"
+"POT-Creation-Date: 2018-05-07 15:58+0200\n"
+"PO-Revision-Date: 2018-05-07 15:59+0200\n"
+"Last-Translator: Edwin Siebel <edwin@studiojoyo.com>\n"
+"Language-Team: Edwin Siebel <edwin@yard.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: src/Leges/vendor\n"
+
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:193
+msgid "New price"
+msgstr "Nieuw bedrag"
+
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:197
+msgid "Price"
+msgstr "Bedrag"
+
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:201
+#: src/Leges/Metabox/MetaboxServiceProvider.php:51
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:83
+msgid "Date new lege active"
+msgstr "Datum actief nieuwe lege"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:31
+msgid "Lege settings"
+msgstr "Lege instellingen"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:39
+msgid "Lege price"
+msgstr "Lege prijs"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:40
+#: src/Leges/Metabox/MetaboxServiceProvider.php:46
+msgid "Price in &euro;"
+msgstr "Prijs in &euro;"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:45
+msgid "Lege new price"
+msgstr "Lege nieuw bedrag"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:54
+msgid "dd-mm-yy"
+msgstr "dd-mm-yy"
+
+#: src/Leges/Metabox/MetaboxServiceProvider.php:61
+msgid "(dd-mm-yy)"
+msgstr "(dd-mm-yy)"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:42
+msgctxt "post type general name"
+msgid "PDC leges"
+msgstr "PDC leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:43
+msgctxt "post type singular name"
+msgid "PDC lege"
+msgstr "PDC lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:44
+msgctxt "admin menu"
+msgid "PDC leges"
+msgstr "PDC leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:45
+msgctxt "add new on admin bar"
+msgid "PDC leges"
+msgstr "PDC leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:46
+msgctxt "lege"
+msgid "Add new pdc lege"
+msgstr "Voeg nieuwe PDC lege toe"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:47
+msgid "Add new pdc lege"
+msgstr "Voeg nieuwe PDC lege toe"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:48
+msgid "New PDC lege"
+msgstr "Nieuwe PDC lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:49
+msgid "Edit PDC lege"
+msgstr "Bewerk PDC lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:50
+msgid "View PDC lege"
+msgstr "Bekijk PDC lege"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:51
+msgid "All PDC leges"
+msgstr "Alle PDC leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:52
+msgid "Search PDC leges"
+msgstr "Zoek PDC leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:53
+msgid "Parent PDC leges:"
+msgstr "Hoofd PDC lege:"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:54
+msgid "No PDC leges found."
+msgstr "Geen PDC leges gevonden."
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:55
+msgid "No PDC leges found in Trash."
+msgstr "Geen PDC leges gevonden in prullenbak."
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:60
+msgid "PDC leges"
+msgstr "PDC leges"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:75
+msgid "Lege price (in &euro;)"
+msgstr "Lege prijs (in &euro;)"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:79
+msgid "Lege new price (in &euro;)"
+msgstr "Nieuwe lege prijs (in &euro;)"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:88
+msgid "Lege shortcode"
+msgstr "Lege shortcode"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:94
+msgid "Published"
+msgstr "Gepubliceerd"
+
+#~ msgid "Add new pdc Lege"
+#~ msgstr "Voeg nieuwe PDC lege toe"
+
+#~ msgctxt "post type general name"
+#~ msgid "Leges"
+#~ msgstr "Leges"
+
+#~ msgctxt "post type singular name"
+#~ msgid "Lege"
+#~ msgstr "Lege"
+
+#~ msgctxt "admin menu"
+#~ msgid "Leges"
+#~ msgstr "Leges"
+
+#~ msgctxt "add new on admin bar"
+#~ msgid "Leges"
+#~ msgstr "Leges"
+
+#~ msgctxt "lege"
+#~ msgid "Add new lege"
+#~ msgstr "Voeg nieuwe lege toe"
+
+#~ msgid "Add new Lege"
+#~ msgstr "Voeg nieuwe lege toe"
+
+#~ msgid "New lege"
+#~ msgstr "Nieuwe lege"
+
+#~ msgid "Edit Lege"
+#~ msgstr "Bewerk lege"
+
+#~ msgid "View lege"
+#~ msgstr "Bekijk lege"
+
+#~ msgid "All leges"
+#~ msgstr "Alle leges"
+
+#~ msgid "Search leges"
+#~ msgstr "Zoek leges"
+
+#~ msgid "Parent leges:"
+#~ msgstr "Hoofd lege pagain:"
+
+#~ msgid "No leges found."
+#~ msgstr "Geen leges gevonden."
+
+#~ msgid "No leges found in Trash."
+#~ msgstr "Geen leges gevonden in prullenbak."
+
+#~ msgid "Leges"
+#~ msgstr "Leges"
+
+#~ msgctxt "add new on admin bar"
+#~ msgid "Lege"
+#~ msgstr "Lege"
+
+#~ msgid "This link does not work, go to our website: <a href=\"%s\">%s</a>"
+#~ msgstr "Deze link werkt niet, bekijk onze website: <a href=\"%s\">%s</a>"

@@ -5,30 +5,31 @@ return [
 	/**
 	 * Service Providers.
 	 */
-	'providers' => [
+	'providers'    => [
 		/**
 		 * Global providers.
 		 */
-
+		OWC\PDC\Leges\PostType\LegesPostTypeServiceProvider::class,
+		OWC\PDC\Leges\Shortcode\ShortcodeServiceProvider::class,
 		/**
 		 * Providers specific to the admin.
 		 */
-		'admin'    => [
-			OWC\Leges\Admin\Settings\SettingsServiceProvider::class,
+		'admin' => [
+			OWC\PDC\Leges\Admin\QuickEdit\QuickEditServiceProvider::class,
+			OWC\PDC\Leges\Metabox\MetaboxServiceProvider::class,
 		],
+	],
 
-		/**
-		 * Providers specific to the network admin.
-		 */
-		'network'  => [
-
-		],
-
-		/**
-		 * Providers specific to the frontend.
-		 */
-		'frontend' => [
-
+	/**
+	 * Dependencies upon which the plugin relies.
+	 *
+	 * Should contain: label, version, file.
+	 */
+	'dependencies' => [
+		[
+			'label'   => 'OpenPDC Base',
+			'file'    => 'pdc-base/pdc-base.php',
+			'version' => '2.0.0'
 		]
 	]
 ];
