@@ -11,7 +11,6 @@ pipelines:
         script:
           - apt-get update -y
           - apt-get install -y git openssh-server
-          - ssh -T git@bitbucket.org -vvv
           - composer install --no-interaction --no-progress --prefer-dist --ignore-platform-reqs
           - ./vendor/bin/phpunit --testsuite "Unit Test"
     - step:
