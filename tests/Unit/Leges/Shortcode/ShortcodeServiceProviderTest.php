@@ -1,14 +1,14 @@
 <?php
 
-namespace OWC\Leges\Tests\Config;
+namespace OWC\PDC\Leges\Tests\Config;
 
 use Mockery as m;
-use OWC\Leges\Plugin\BasePlugin;
-use OWC\Leges\Plugin\Loader;
-use OWC\Leges\Shortcode\Shortcode;
-use OWC\Leges\Shortcode\ShortcodeServiceProvider;
-use OWC\Leges\Tests\TestCase;
-use OWC_PDC_Base\Core\Config;
+use OWC\PDC\Leges\Plugin\BasePlugin;
+use OWC\PDC\Leges\Plugin\Loader;
+use OWC\PDC\Leges\Shortcode\Shortcode;
+use OWC\PDC\Leges\Shortcode\ShortcodeServiceProvider;
+use OWC\PDC\Leges\Tests\TestCase;
+use OWC\PDC\Base\Foundation\Config;
 
 class ShortcodeServiceProviderTest extends TestCase
 {
@@ -20,7 +20,7 @@ class ShortcodeServiceProviderTest extends TestCase
 
 	/**
 	 * Shortcode object.
-	 * @var \OWC\Leges\Shortcode\Shortcode
+	 * @var \OWC\PDC\Leges\Shortcode\Shortcode
 	 */
 	private $shortcode;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace OWC\Leges\Admin\QuickEdit;
+namespace OWC\PDC\Leges\Admin\QuickEdit;
 
-use OWC\Leges\Plugin\ServiceProvider;
+use OWC\PDC\Base\Foundation\ServiceProvider;
 
 class QuickEditServiceProvider extends ServiceProvider
 {

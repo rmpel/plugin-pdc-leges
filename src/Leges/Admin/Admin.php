@@ -1,9 +1,9 @@
 <?php
 
-namespace OWC\Leges\Admin;
+namespace OWC\PDC\Leges\Admin;
 
 use Exception;
-use OWC\Leges\Plugin\BasePlugin;
+use OWC\PDC\Leges\Plugin\BasePlugin;
 
 class Admin
 {
@@ -11,21 +11,21 @@ class Admin
 	/**
 	 * Instance of the plugin.
 	 *
-	 * @var $plugin \OWC\Leges\Plugin
+	 * @var $plugin \OWC\PDC\Leges\Plugin
 	 */
 	protected $plugin;
 
 	/**
 	 * Instance of the actions and filters loader.
 	 *
-	 * @var $plugin \OWC\Leges\Plugin\Loader
+	 * @var $plugin \OWC\PDC\Leges\Plugin\Loader
 	 */
 	protected $loader;
 
 	/**
 	 * Admin constructor.
 	 *
-	 * @param \OWC\Leges\Plugin\BasePLugin $plugin
+	 * @param \OWC\PDC\Leges\Plugin\BasePLugin $plugin
 	 */
 	public function __construct(BasePlugin $plugin)
 	{

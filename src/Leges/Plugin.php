@@ -1,8 +1,8 @@
 <?php
 
-namespace OWC\Leges;
+namespace OWC\PDC\Leges;
 
-use OWC\Leges\Plugin\BasePlugin;
+use OWC\PDC\Leges\Plugin\BasePlugin;
 
 class Plugin extends BasePlugin
 {

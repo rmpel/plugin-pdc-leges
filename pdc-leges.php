@@ -14,8 +14,8 @@
  * Text Domain:       pdc-leges
  */
 
-use OWC\Leges\Plugin;
-use OWC\Leges\Plugin\BasePlugin;
+use OWC\PDC\Leges\Autoloader;
+use OWC\PDC\Leges\Foundation\Plugin;
 
 /**
  * If this file is called directly, abort.
@@ -28,7 +28,7 @@ if ( ! defined('WPINC') ) {
  * Only manual loaded file: the autoloader.
  */
 require_once __DIR__ . '/autoloader.php';
-new AutoloaderLeges();
+new Autoloader();
 
 /**
  * Begin execution of the plugin
@@ -38,9 +38,8 @@ new AutoloaderLeges();
  * and wp_loaded action hooks.
  */
 
-BasePlugin::addStartUpHooks(__FILE__);
-BasePlugin::addTearDownHooks(__FILE__);
+$plugin = new Plugin(__DIR__);
 
-add_action('plugins_loaded', function() {
-	$plugin = ( new Plugin(__DIR__) )->boot();
-}, 10);
+add_action('plugins_loaded', function() use ($plugin) {
+	$plugin->boot();
+}, 9);

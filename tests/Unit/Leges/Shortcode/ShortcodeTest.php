@@ -1,13 +1,13 @@
 <?php
 
-namespace OWC\Leges\Tests\Config;
+namespace OWC\PDC\Leges\Tests\Config;
 
 use Mockery as m;
-use OWC\Leges\Plugin\BasePlugin;
-use OWC\Leges\Plugin\Loader;
-use OWC\Leges\Shortcode\Shortcode;
-use OWC\Leges\Tests\TestCase;
-use OWC_PDC_Base\Core\Config;
+use OWC\PDC\Leges\Plugin\BasePlugin;
+use OWC\PDC\Leges\Plugin\Loader;
+use OWC\PDC\Leges\Shortcode\Shortcode;
+use OWC\PDC\Leges\Tests\Unit\TestCase;
+use OWC\PDC\Base\Foundation\Config;
 
 class TestShortcode extends TestCase
 {

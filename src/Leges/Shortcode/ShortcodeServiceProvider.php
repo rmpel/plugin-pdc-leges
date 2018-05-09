@@ -1,8 +1,8 @@
 <?php
 
-namespace OWC\Leges\Shortcode;
+namespace OWC\PDC\Leges\Shortcode;
 
-use OWC\Leges\Plugin\ServiceProvider;
+use OWC\PDC\Base\Foundation\ServiceProvider;
 
 class ShortcodeServiceProvider extends ServiceProvider
 {

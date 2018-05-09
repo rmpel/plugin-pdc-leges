@@ -1,9 +1,9 @@
 <?php
 
-namespace OWC\Leges\PostType;
+namespace OWC\PDC\Leges\PostType;
 
-use OWC\Leges\Plugin\ServiceProvider;
-use OWC\Leges\Shortcode\ShortcodeServiceProvider;
+use OWC\PDC\Base\Foundation\ServiceProvider;
+use OWC\PDC\Leges\Shortcode\ShortcodeServiceProvider;
 
 class LegesPostTypeServiceProvider extends ServiceProvider
 {
@@ -35,7 +35,7 @@ class LegesPostTypeServiceProvider extends ServiceProvider
 	{
 
 		if ( ! function_exists('register_extended_post_type') ) {
-			throw new \Exception('function register_extended_post_type must be registered.');
+			require_once( $this->plugin->getRootPath() . '/src/Leges/vendor/johnbillion/extended-cpts/extended-cpts.php' );
 		}
 
 		$labels = [
@@ -71,26 +71,26 @@ class LegesPostTypeServiceProvider extends ServiceProvider
 			'show_in_feed'       => false,
 			'archive'            => false,
 			'admin_cols'         => [
-				'price'          => [
+				'price'        => [
 					'title'    => __('Lege price (in &euro;)', 'pdc-leges'),
 					'meta_key' => "{$this->prefix}-price",
 				],
-				'new-price'      => [
+				'new-price'    => [
 					'title'    => __('Lege new price (in &euro;)', 'pdc-leges'),
 					'meta_key' => "{$this->prefix}-new-price",
 				],
-				'active-date'    => [
+				'active-date'  => [
 					'title'       => __('Date new lege active', 'pdc-leges'),
 					'meta_key'    => "{$this->prefix}-active-date",
 					'date_format' => 'd/m/Y'
 				],
-				'code-preview'   => [
+				'code-preview' => [
 					'title'    => __('Lege shortcode', 'pdc-leges'),
 					'function' => function() {
 						echo ShortcodeServiceProvider::generateShortcode(get_the_ID());
 					}
 				],
-				'published'      => [
+				'published'    => [
 					'title'       => __('Published', 'pdc-leges'),
 					'post_field'  => 'post_date',
 					'date_format' => 'd M Y'

@@ -1,6 +1,6 @@
 <?php
 
-namespace OWC\Leges\Shortcode;
+namespace OWC\PDC\Leges\Shortcode;
 
 class Shortcode
 {

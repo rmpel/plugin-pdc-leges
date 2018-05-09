@@ -1,14 +1,14 @@
 <?php
 
-namespace OWC\Leges\Tests\PostType;
+namespace OWC\PDC\Leges\Tests\PostType;
 
 use Extended_CPT;
 use Mockery as m;
-use OWC\Leges\Plugin\BasePlugin;
-use OWC\Leges\Plugin\Loader;
-use OWC\Leges\PostType\LegesPostTypeServiceProvider;
-use OWC\Leges\Tests\TestCase;
-use OWC_PDC_Base\Core\Config;
+use OWC\PDC\Base\Foundation\Config;
+use OWC\PDC\Base\Foundation\Loader;
+use OWC\PDC\Base\Foundation\Plugin;
+use OWC\PDC\Leges\PostType\LegesPostTypeServiceProvider;
+use OWC\PDC\Leges\Tests\TestCase;
 use WP_Mock;
 
 class LegesPostTypeServiceProviderTest extends TestCase
@@ -29,7 +29,7 @@ class LegesPostTypeServiceProviderTest extends TestCase
 		WP_Mock::setUp();
 
 		$config       = m::mock(Config::class);
-		$this->plugin = m::mock(BasePlugin::class);
+		$this->plugin = m::mock(Plugin::class);
 
 		$this->plugin->config = $config;
 		$this->plugin->loader = m::mock(Loader::class);

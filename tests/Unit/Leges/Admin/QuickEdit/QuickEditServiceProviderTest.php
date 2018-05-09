@@ -1,13 +1,13 @@
 <?php
 
-namespace OWC\Leges\Test\Admin\QuickEdit;
+namespace OWC\PDC\Leges\Test\Admin\QuickEdit;
 
 use Mockery as m;
-use OWC\Leges\Admin\QuickEdit\QuickEditServiceProvider;
-use OWC\Leges\Plugin\BasePlugin;
-use OWC\Leges\Plugin\Loader;
-use OWC\Leges\Tests\TestCase;
-use OWC_PDC_Base\Core\Config;
+use OWC\PDC\Base\Foundation\Config;
+use OWC\PDC\Base\Foundation\Loader;
+use OWC\PDC\Base\Foundation\Plugin;
+use OWC\PDC\Leges\Admin\QuickEdit\QuickEditServiceProvider;
+use OWC\PDC\Leges\Unit\Tests\TestCase;
 use StdClass;
 use WP_Mock;
 
@@ -41,7 +41,7 @@ class QuickEditServiceProviderTest extends TestCase
 		$this->setRunClassInSeparateProcess(true);
 
 		$config       = m::mock(Config::class);
-		$this->plugin = m::mock(BasePlugin::class);
+		$this->plugin = m::mock(Plugin::class);
 
 		$this->plugin->config = $config;
 		$this->plugin->loader = m::mock(Loader::class);

@@ -1,13 +1,13 @@
 <?php
 
-namespace OWC\Leges\Tests\Metabox;
+namespace OWC\PDC\Leges\Tests\Metabox;
 
 use Mockery as m;
-use OWC\Leges\Metabox\MetaboxServiceProvider;
-use OWC\Leges\Plugin\BasePlugin;
-use OWC\Leges\Plugin\Loader;
-use OWC\Leges\Tests\TestCase;
-use OWC_PDC_Base\Core\Config;
+use OWC\PDC\Base\Foundation\Config;
+use OWC\PDC\Base\Foundation\Loader;
+use OWC\PDC\Base\Foundation\Plugin;
+use OWC\PDC\Leges\Metabox\MetaboxServiceProvider;
+use OWC\PDC\Leges\Tests\TestCase;
 use WP_Mock;
 
 class MetaboxServiceProviderTest extends TestCase
@@ -27,7 +27,7 @@ class MetaboxServiceProviderTest extends TestCase
 	public function check_registration_of_metaboxes()
 	{
 		$config = m::mock(Config::class);
-		$plugin = m::mock(BasePlugin::class);
+		$plugin = m::mock(Plugin::class);
 
 		$plugin->config = $config;
 		$plugin->loader = m::mock(Loader::class);

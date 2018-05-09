@@ -1,6 +1,6 @@
 <?php
 
-namespace OWC\Leges\Tests;
+namespace OWC\PDC\Leges\Unit\Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnit;
 use ReflectionClass;
