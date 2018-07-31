@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Config Expander\n"
-"POT-Creation-Date: 2018-05-07 15:58+0200\n"
-"PO-Revision-Date: 2018-05-07 15:59+0200\n"
-"Last-Translator: Edwin Siebel <edwin@studiojoyo.com>\n"
+"POT-Creation-Date: 2018-07-31 14:21+0200\n"
+"PO-Revision-Date: 2018-07-31 14:21+0200\n"
+"Last-Translator: Edwin Siebel <edwin@yard.nl>\n"
 "Language-Team: Edwin Siebel <edwin@yard.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -20,105 +20,115 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: vendor\n"
 "X-Poedit-SearchPathExcluded-1: src/Leges/vendor\n"
 
-#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:193
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:201
 msgid "New price"
 msgstr "Nieuw bedrag"
 
-#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:197
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:205
 msgid "Price"
 msgstr "Bedrag"
 
-#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:201
-#: src/Leges/Metabox/MetaboxServiceProvider.php:51
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:209
+#: src/Leges/Metabox/MetaboxServiceProvider.php:49
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:83
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:72
 msgid "Date new lege active"
 msgstr "Datum actief nieuwe lege"
 
-#: src/Leges/Metabox/MetaboxServiceProvider.php:31
+#: src/Leges/Metabox/MetaboxServiceProvider.php:29
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:52
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:88
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:94
 msgid "Lege settings"
 msgstr "Lege instellingen"
 
-#: src/Leges/Metabox/MetaboxServiceProvider.php:39
+#: src/Leges/Metabox/MetaboxServiceProvider.php:37
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:60
 msgid "Lege price"
 msgstr "Lege prijs"
 
-#: src/Leges/Metabox/MetaboxServiceProvider.php:40
-#: src/Leges/Metabox/MetaboxServiceProvider.php:46
+#: src/Leges/Metabox/MetaboxServiceProvider.php:38
+#: src/Leges/Metabox/MetaboxServiceProvider.php:44
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:61
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:67
 msgid "Price in &euro;"
 msgstr "Prijs in &euro;"
 
-#: src/Leges/Metabox/MetaboxServiceProvider.php:45
+#: src/Leges/Metabox/MetaboxServiceProvider.php:43
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:66
 msgid "Lege new price"
 msgstr "Lege nieuw bedrag"
 
-#: src/Leges/Metabox/MetaboxServiceProvider.php:54
+#: src/Leges/Metabox/MetaboxServiceProvider.php:52
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:75
 msgid "dd-mm-yy"
 msgstr "dd-mm-yy"
 
-#: src/Leges/Metabox/MetaboxServiceProvider.php:61
+#: src/Leges/Metabox/MetaboxServiceProvider.php:59
+#: tests/Unit/Leges/Metabox/MetaboxServiceProviderTest.php:82
 msgid "(dd-mm-yy)"
 msgstr "(dd-mm-yy)"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:42
 msgctxt "post type general name"
-msgid "PDC leges"
-msgstr "PDC leges"
+msgid "Leges"
+msgstr "Leges"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:43
 msgctxt "post type singular name"
-msgid "PDC lege"
-msgstr "PDC lege"
+msgid "Lege"
+msgstr "Lege"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:44
 msgctxt "admin menu"
-msgid "PDC leges"
-msgstr "PDC leges"
+msgid "Leges"
+msgstr "Leges"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:45
 msgctxt "add new on admin bar"
-msgid "PDC leges"
-msgstr "PDC leges"
+msgid "Leges"
+msgstr "Leges"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:46
 msgctxt "lege"
-msgid "Add new pdc lege"
-msgstr "Voeg nieuwe PDC lege toe"
+msgid "Add new lege"
+msgstr "Voeg nieuwe lege toe"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:47
-msgid "Add new pdc lege"
-msgstr "Voeg nieuwe PDC lege toe"
+msgid "Add new lege"
+msgstr "Voeg nieuwe lege toe"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:48
-msgid "New PDC lege"
-msgstr "Nieuwe PDC lege"
+msgid "New lege"
+msgstr "Nieuwe lege"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:49
-msgid "Edit PDC lege"
-msgstr "Bewerk PDC lege"
+msgid "Edit lege"
+msgstr "Bewerk lege"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:50
-msgid "View PDC lege"
-msgstr "Bekijk PDC lege"
+msgid "View lege"
+msgstr "Bekijk lege"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:51
-msgid "All PDC leges"
-msgstr "Alle PDC leges"
+msgid "All leges"
+msgstr "Alle leges"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:52
-msgid "Search PDC leges"
-msgstr "Zoek PDC leges"
+msgid "Search leges"
+msgstr "Zoek leges"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:53
-msgid "Parent PDC leges:"
-msgstr "Hoofd PDC lege:"
+msgid "Parent leges:"
+msgstr "Hoofd lege pagain:"
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:54
-msgid "No PDC leges found."
-msgstr "Geen PDC leges gevonden."
+msgid "No leges found."
+msgstr "Geen leges gevonden."
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:55
-msgid "No PDC leges found in Trash."
-msgstr "Geen PDC leges gevonden in prullenbak."
+msgid "No leges found in Trash."
+msgstr "Geen leges gevonden in prullenbak."
 
 #: src/Leges/PostType/LegesPostTypeServiceProvider.php:60
 msgid "PDC leges"
@@ -140,55 +150,61 @@ msgstr "Lege shortcode"
 msgid "Published"
 msgstr "Gepubliceerd"
 
-#~ msgid "Add new pdc Lege"
-#~ msgstr "Voeg nieuwe PDC lege toe"
-
 #~ msgctxt "post type general name"
-#~ msgid "Leges"
-#~ msgstr "Leges"
+#~ msgid "PDC leges"
+#~ msgstr "PDC leges"
 
 #~ msgctxt "post type singular name"
-#~ msgid "Lege"
-#~ msgstr "Lege"
+#~ msgid "PDC lege"
+#~ msgstr "PDC lege"
 
 #~ msgctxt "admin menu"
-#~ msgid "Leges"
-#~ msgstr "Leges"
+#~ msgid "PDC leges"
+#~ msgstr "PDC leges"
 
 #~ msgctxt "add new on admin bar"
-#~ msgid "Leges"
-#~ msgstr "Leges"
+#~ msgid "PDC leges"
+#~ msgstr "PDC leges"
 
 #~ msgctxt "lege"
-#~ msgid "Add new lege"
-#~ msgstr "Voeg nieuwe lege toe"
+#~ msgid "Add new pdc lege"
+#~ msgstr "Voeg nieuwe PDC lege toe"
+
+#~ msgid "Add new pdc lege"
+#~ msgstr "Voeg nieuwe PDC lege toe"
+
+#~ msgid "New PDC lege"
+#~ msgstr "Nieuwe PDC lege"
+
+#~ msgid "Edit PDC lege"
+#~ msgstr "Bewerk PDC lege"
+
+#~ msgid "View PDC lege"
+#~ msgstr "Bekijk PDC lege"
+
+#~ msgid "All PDC leges"
+#~ msgstr "Alle PDC leges"
+
+#~ msgid "Search PDC leges"
+#~ msgstr "Zoek PDC leges"
+
+#~ msgid "Parent PDC leges:"
+#~ msgstr "Hoofd PDC lege:"
+
+#~ msgid "No PDC leges found."
+#~ msgstr "Geen PDC leges gevonden."
+
+#~ msgid "No PDC leges found in Trash."
+#~ msgstr "Geen PDC leges gevonden in prullenbak."
+
+#~ msgid "Add new pdc Lege"
+#~ msgstr "Voeg nieuwe PDC lege toe"
 
 #~ msgid "Add new Lege"
 #~ msgstr "Voeg nieuwe lege toe"
 
-#~ msgid "New lege"
-#~ msgstr "Nieuwe lege"
-
 #~ msgid "Edit Lege"
 #~ msgstr "Bewerk lege"
-
-#~ msgid "View lege"
-#~ msgstr "Bekijk lege"
-
-#~ msgid "All leges"
-#~ msgstr "Alle leges"
-
-#~ msgid "Search leges"
-#~ msgstr "Zoek leges"
-
-#~ msgid "Parent leges:"
-#~ msgstr "Hoofd lege pagain:"
-
-#~ msgid "No leges found."
-#~ msgstr "Geen leges gevonden."
-
-#~ msgid "No leges found in Trash."
-#~ msgstr "Geen leges gevonden in prullenbak."
 
 #~ msgid "Leges"
 #~ msgstr "Leges"

@@ -39,20 +39,20 @@ class LegesPostTypeServiceProvider extends ServiceProvider
 		}
 
 		$labels = [
-			'name'               => _x('PDC leges', 'post type general name', 'pdc-leges'),
-			'singular_name'      => _x('PDC lege', 'post type singular name', 'pdc-leges'),
-			'menu_name'          => _x('PDC leges', 'admin menu', 'pdc-leges'),
-			'name_admin_bar'     => _x('PDC leges', 'add new on admin bar', 'pdc-leges'),
-			'add_new'            => _x('Add new pdc lege', 'lege', 'pdc-leges'),
-			'add_new_item'       => __('Add new pdc lege', 'pdc-leges'),
-			'new_item'           => __('New PDC lege', 'pdc-leges'),
-			'edit_item'          => __('Edit PDC lege', 'pdc-leges'),
-			'view_item'          => __('View PDC lege', 'pdc-leges'),
-			'all_items'          => __('All PDC leges', 'pdc-leges'),
-			'search_items'       => __('Search PDC leges', 'pdc-leges'),
-			'parent_item_colon'  => __('Parent PDC leges:', 'pdc-leges'),
-			'not_found'          => __('No PDC leges found.', 'pdc-leges'),
-			'not_found_in_trash' => __('No PDC leges found in Trash.', 'pdc-leges')
+			'name'               => _x('Leges', 'post type general name', 'pdc-leges'),
+			'singular_name'      => _x('Lege', 'post type singular name', 'pdc-leges'),
+			'menu_name'          => _x('Leges', 'admin menu', 'pdc-leges'),
+			'name_admin_bar'     => _x('Leges', 'add new on admin bar', 'pdc-leges'),
+			'add_new'            => _x('Add new lege', 'lege', 'pdc-leges'),
+			'add_new_item'       => __('Add new lege', 'pdc-leges'),
+			'new_item'           => __('New lege', 'pdc-leges'),
+			'edit_item'          => __('Edit lege', 'pdc-leges'),
+			'view_item'          => __('View lege', 'pdc-leges'),
+			'all_items'          => __('All leges', 'pdc-leges'),
+			'search_items'       => __('Search leges', 'pdc-leges'),
+			'parent_item_colon'  => __('Parent leges:', 'pdc-leges'),
+			'not_found'          => __('No leges found.', 'pdc-leges'),
+			'not_found_in_trash' => __('No leges found in Trash.', 'pdc-leges')
 		];
 
 		$args = [

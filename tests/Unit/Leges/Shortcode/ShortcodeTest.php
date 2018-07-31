@@ -160,7 +160,7 @@ class TestShortcode extends TestCase
 				'return' => [
 					'_pdc-lege-price'       => 10,
 					'_pdc-lege-new-price'   => 20,
-					'_pdc-lege-active-date' => '23-05-2018',
+					'_pdc-lege-active-date' => '23-05-3000',
 				]
 			]
 		);
