@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "plugin/pdc-base": "dev-feat-namespace"
+    "plugin/pdc-base": "dev-master"
   },
   "require-dev": {
     "mockery/mockery": "1.0.*",
