@@ -1,5 +1,7 @@
 <?php
 
+namespace OWC\PDC\Leges\Tests\Bootstrap;
+
 /**
  * PHPUnit bootstrap file
  */
@@ -14,35 +16,9 @@ define('WP_PLUGIN_DIR', __DIR__);
 /**
  * Bootstrap WordPress Mock.
  */
-\WP_Mock::setUsePatchwork( true );
+\WP_Mock::setUsePatchwork(true);
 \WP_Mock::bootstrap();
 
 $GLOBALS['pdc-leges'] = [
-	'active_plugins' => ['pdc-leges/pdc-leges.php'],
+    'active_plugins' => ['pdc-leges/pdc-leges.php'],
 ];
-
-class WP_CLI
-{
-	public static function add_command()
-	{
-	}
-}
-
-if ( ! function_exists('get_echo') ) {
-
-	/**
-	 * Capture the echo of a callable function.
-	 *
-	 * @param       $callable
-	 * @param array $args
-	 *
-	 * @return string
-	 */
-	function get_echo($callable, $args = [])
-	{
-		ob_start();
-		call_user_func_array($callable, $args);
-
-		return ob_get_clean();
-	}
-}

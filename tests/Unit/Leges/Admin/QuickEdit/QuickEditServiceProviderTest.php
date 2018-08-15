@@ -8,8 +8,8 @@ use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Leges\Admin\QuickEdit\QuickEditServiceProvider;
 use OWC\PDC\Leges\Tests\Unit\TestCase;
-use StdClass;
 use WP_Mock;
+use WP_Post;
 
 class QuickEditServiceProviderTest extends TestCase
 {
@@ -61,7 +61,7 @@ class QuickEditServiceProviderTest extends TestCase
 			]
 		];
 
-		$this->post            = new StdClass();
+		$this->post            = m::mock(WP_Post::class);
 		$this->post->ID        = 5;
 		$this->post->post_type = 'page';
 
