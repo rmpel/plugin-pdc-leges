@@ -1,14 +1,20 @@
 <?php
+/**
+ * Handles shortcode generation.
+ */
 
 namespace OWC\PDC\Leges\Shortcode;
 
+/**
+ * Handles shortcode generation.
+ */
 class Shortcode
 {
 
     /**
      * Default fields for leges.
      *
-     * @var array
+     * @var array $defaults
      */
     protected $defaults = [
         '_pdc-lege-active-date' => null,
@@ -27,10 +33,10 @@ class Shortcode
     {
 
         $attributes = shortcode_atts([
-            'id' => 0,
+            'id' => 0
         ], $attributes);
 
-        if (!isset($attributes['id']) or empty($attributes['id']) or (count($attributes['id']) < 1)) {
+        if (! isset($attributes['id']) or empty($attributes['id']) or ( count($attributes['id']) < 1 )) {
             return false;
         }
 
@@ -69,6 +75,8 @@ class Shortcode
     }
 
     /**
+     * Merges the settings with defaults, to always have proper settings.
+     *
      * @param $metaData
      *
      * @return array
@@ -77,8 +85,7 @@ class Shortcode
     {
         $output = [];
         foreach ($metaData as $key => $data) {
-
-            if (!in_array($key, array_keys($this->defaults))) {
+            if (! in_array($key, array_keys($this->defaults))) {
                 continue;
             }
 
@@ -111,5 +118,4 @@ class Shortcode
     {
         return (new \DateTime($dateActive) <= new \DateTime('now'));
     }
-
 }
