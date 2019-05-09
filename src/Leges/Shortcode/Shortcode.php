@@ -36,7 +36,7 @@ class Shortcode
             'id' => 0
         ], $attributes);
 
-        if (! isset($attributes['id']) or empty($attributes['id']) or ( count($attributes['id']) < 1 )) {
+        if (!isset($attributes['id']) or empty($attributes['id']) or ($attributes['id'] < 1)) {
             return false;
         }
 
