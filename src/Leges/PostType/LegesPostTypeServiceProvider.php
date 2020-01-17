@@ -45,7 +45,6 @@ class LegesPostTypeServiceProvider extends ServiceProvider
      */
     public function registerPostType()
     {
-
         if (! function_exists('register_extended_post_type')) {
             require_once($this->plugin->getRootPath() . '/src/Leges/vendor/johnbillion/extended-cpts/extended-cpts.php');
         }
@@ -106,7 +105,12 @@ class LegesPostTypeServiceProvider extends ServiceProvider
                     'title'       => __('Published', 'pdc-leges'),
                     'post_field'  => 'post_date',
                     'date_format' => 'd M Y'
-                ]
+                ],
+                'modified'    => [
+                    'title'       => __('Modified', 'pdc-leges'),
+                    'post_field'  => 'post_modified',
+                    'date_format' => 'd M Y'
+                ],
             ],
         ];
 

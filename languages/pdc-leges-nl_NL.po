@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Config Expander\n"
-"POT-Creation-Date: 2018-10-03 11:23+0200\n"
-"PO-Revision-Date: 2018-10-03 11:23+0200\n"
+"POT-Creation-Date: 2020-01-17 14:56+0100\n"
+"PO-Revision-Date: 2020-01-17 14:56+0100\n"
 "Last-Translator: Edwin Siebel <edwin@yard.nl>\n"
 "Language-Team: Yard Internet <info@yard.nl>\n"
 "Language: nl_NL\n"
@@ -22,17 +22,17 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: vendor\n"
 "X-Poedit-SearchPathExcluded-3: languages\n"
 
-#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:225
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:224
 msgid "New price"
 msgstr "Nieuw bedrag"
 
-#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:229
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:228
 msgid "Price"
 msgstr "Bedrag"
 
-#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:233
+#: src/Leges/Admin/QuickEdit/QuickEditServiceProvider.php:232
 #: src/Leges/Metabox/MetaboxServiceProvider.php:60
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:95
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:94
 msgid "Date new lege active"
 msgstr "Datum actief nieuwe lege"
 
@@ -61,86 +61,90 @@ msgstr "dd-mm-yy"
 msgid "(dd-mm-yy)"
 msgstr "(dd-mm-yy)"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:54
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:53
 msgctxt "post type general name"
 msgid "Leges"
 msgstr "Leges"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:55
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:54
 msgctxt "post type singular name"
 msgid "Lege"
 msgstr "Lege"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:56
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:55
 msgctxt "admin menu"
 msgid "Leges"
 msgstr "Leges"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:57
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:56
 msgctxt "add new on admin bar"
 msgid "Leges"
 msgstr "Leges"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:58
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:57
 msgctxt "lege"
 msgid "Add new lege"
 msgstr "Voeg nieuwe lege toe"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:59
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:58
 msgid "Add new lege"
 msgstr "Voeg nieuwe lege toe"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:60
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:59
 msgid "New lege"
 msgstr "Nieuwe lege"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:61
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:60
 msgid "Edit lege"
 msgstr "Bewerk lege"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:62
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:61
 msgid "View lege"
 msgstr "Bekijk lege"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:63
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:62
 msgid "All leges"
 msgstr "Alle leges"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:64
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:63
 msgid "Search leges"
 msgstr "Zoek leges"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:65
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:64
 msgid "Parent leges:"
 msgstr "Hoofd lege pagain:"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:66
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:65
 msgid "No leges found."
 msgstr "Geen leges gevonden."
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:67
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:66
 msgid "No leges found in Trash."
 msgstr "Geen leges gevonden in prullenbak."
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:72
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:71
 msgid "PDC leges"
 msgstr "PDC leges"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:87
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:86
 msgid "Lege price (in &euro;)"
 msgstr "Lege prijs (in &euro;)"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:91
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:90
 msgid "Lege new price (in &euro;)"
 msgstr "Nieuwe lege prijs (in &euro;)"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:100
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:99
 msgid "Lege shortcode"
 msgstr "Lege shortcode"
 
-#: src/Leges/PostType/LegesPostTypeServiceProvider.php:106
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:105
 msgid "Published"
 msgstr "Gepubliceerd"
+
+#: src/Leges/PostType/LegesPostTypeServiceProvider.php:110
+msgid "Modified"
+msgstr "Aangepast"
 
 #~ msgctxt "post type general name"
 #~ msgid "PDC leges"
