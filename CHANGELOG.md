@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## version 1.1.0
+
+### Feature
+
+-   (feat): update lege prices via WP_CLI command
+
 ## Version 1.0.4
 
 ### Changed
@@ -10,7 +16,7 @@
 
 ### Fix:
 
--   WordPress 5.3 has some class and style changes. Due to that, the quickedit did not work correctly.
+-   WordPress 5.3 has some class and style changes. Due to that, the quickedit did not work correctly
 
 ## Version 1.0.2
 

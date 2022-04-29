@@ -32,7 +32,7 @@ class TestShortcode extends TestCase
      */
     protected $postID = 10;
 
-    public function setUp()
+    public function setUp(): void
     {
         \WP_Mock::setUp();
 
@@ -45,7 +45,7 @@ class TestShortcode extends TestCase
         $this->service = new Shortcode();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         \WP_Mock::tearDown();
     }
@@ -58,7 +58,9 @@ class TestShortcode extends TestCase
             'return' => null,
         ]);
 
-        \WP_Mock::userFunction('get_post_status', [
+        \WP_Mock::userFunction(
+            'get_post_status',
+            [
             'args' => $this->postID,
             'return' => true,
         ]
@@ -80,7 +82,9 @@ class TestShortcode extends TestCase
             'return_arg' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_post_status', [
+        \WP_Mock::userFunction(
+            'get_post_status',
+            [
             'args' => $this->postID,
             'return' => false,
         ]
@@ -102,7 +106,9 @@ class TestShortcode extends TestCase
             'return_arg' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_post_status', [
+        \WP_Mock::userFunction(
+            'get_post_status',
+            [
             'args' => $this->postID,
             'return' => true,
         ]
@@ -112,7 +118,9 @@ class TestShortcode extends TestCase
             'return_args' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_metadata', [
+        \WP_Mock::userFunction(
+            'get_metadata',
+            [
             'args' => [
                 'post',
                 $this->postID,
@@ -142,7 +150,9 @@ class TestShortcode extends TestCase
             'return_arg' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_post_status', [
+        \WP_Mock::userFunction(
+            'get_post_status',
+            [
             'args' => $this->postID,
             'return' => true,
         ]
@@ -152,7 +162,9 @@ class TestShortcode extends TestCase
             'return_args' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_metadata', [
+        \WP_Mock::userFunction(
+            'get_metadata',
+            [
             'args' => [
                 'post',
                 $this->postID,
@@ -182,7 +194,9 @@ class TestShortcode extends TestCase
             'return_arg' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_post_status', [
+        \WP_Mock::userFunction(
+            'get_post_status',
+            [
             'args' => $this->postID,
             'return' => true,
         ]
@@ -192,7 +206,9 @@ class TestShortcode extends TestCase
             'return_args' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_metadata', [
+        \WP_Mock::userFunction(
+            'get_metadata',
+            [
             'args' => [
                 'post',
                 $this->postID,
@@ -223,7 +239,9 @@ class TestShortcode extends TestCase
             'return_arg' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_post_status', [
+        \WP_Mock::userFunction(
+            'get_post_status',
+            [
             'args' => $this->postID,
             'return' => true,
         ]
@@ -233,7 +251,9 @@ class TestShortcode extends TestCase
             'return_args' => 1,
         ]);
 
-        \WP_Mock::userFunction('get_metadata', [
+        \WP_Mock::userFunction(
+            'get_metadata',
+            [
             'args' => [
                 'post',
                 $this->postID,

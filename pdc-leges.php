@@ -4,7 +4,7 @@
  * Plugin Name:       PDC Leges
  * Plugin URI:        https://www.openwebconcept.nl
  * Description:       PDC Leges
- * Version:           1.0.4
+ * Version:           1.1.0
  * Author:            Yard Internet
  * Author URI:        https://www.yardinternet.nl/
  * License:           GPL-3.0

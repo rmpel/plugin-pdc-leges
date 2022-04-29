@@ -8,6 +8,19 @@ Add leges to the repository, and allows to insert them where needed in the PDC i
 * Unzip and/or move all files to the /wp-content/plugins/pdc-leges directory
 * Log into WordPress admin and activate the ‘PDC Leges’ plugin through the ‘Plugins’ menu
 
+### Command
+Lege prices can be updated automatically via a WP_CLI command, this command should be registred in a cron-job. 
+The full command name to use is 'wp owc-update-leges'.
+
+##### Command 'wp owc-update-leges'
+A lege has 3 settings: 
+- Current lege price
+- New lege price
+- Date active new lege price 
+
+The command queries all the leges which have valid values in the 'New lege price' and 'Date active new lege price' setting fields.
+If the date in the 'Date active new lege price' settings field has been expired the 'Current lege price' settings field will be updated with the new price. If the update succeedes the 'New lege price' and 'Date active new lege price' setting fields will be cleared.
+
 ### Filters & Actions
 
 There are various [hooks](https://codex.wordpress.org/Plugin_API/Hooks), which allows for changing the output.

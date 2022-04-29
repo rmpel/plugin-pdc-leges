@@ -7,6 +7,7 @@ namespace OWC\PDC\Leges\PostType;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
 use OWC\PDC\Leges\Shortcode\ShortcodeServiceProvider;
+use OWC\PDC\Leges\PostType\Commands\UpdatePrices;
 
 /**
  * Provider which handles registration of posttype.
@@ -36,6 +37,10 @@ class LegesPostTypeServiceProvider extends ServiceProvider
     public function register()
     {
         $this->plugin->loader->addAction('init', $this, 'registerPostType');
+
+        if (class_exists('\WP_CLI')) {
+            \WP_CLI::add_command('owc-update-leges', [UpdatePrices::class, 'execute'], ['shortdesc' => 'Update lege prices when specified date has been reached.']);
+        }
     }
 
     /**
