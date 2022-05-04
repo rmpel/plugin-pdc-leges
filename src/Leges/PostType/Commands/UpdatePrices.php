@@ -58,7 +58,7 @@ class UpdatePrices
             return false;
         }
 
-        if ($activeDate > date('d-m-Y')) {
+        if (\DateTime::createFromFormat('d-m-Y', $activeDate) > new \DateTime()) {
             return false;
         }
 
@@ -71,11 +71,11 @@ class UpdatePrices
         $newPrice = \get_post_meta($lege->ID, '_pdc-lege-new-price', true);
 
         /**
-         * Based on the WP_Query these values can't be empty.
-         * But what if someone cleares one of these values after the execution of the WP_Query.
+         * Based on the WP_Query this value can't be empty.
+         * But what if someone cleares the value after the execution of the WP_Query.
          */
-        if (empty($currentPrice) || empty($newPrice)) {
-            \WP_CLI::warning(sprintf('Could not update lege [%s], at least one of the price meta fields is empty.', $lege->post_title));
+        if (empty($newPrice)) {
+            \WP_CLI::warning(sprintf('Could not update lege [%s], new price meta field is empty.', $lege->post_title));
             return;
         }
 

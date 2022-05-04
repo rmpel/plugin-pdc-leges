@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## version 1.1.1
+
+### Fix
+
+-   (fix): new lege price date comparison
+
 ## version 1.1.0
 
 ### Feature
