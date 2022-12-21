@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## version 1.1.3
+
+### Fix
+
+-   Validate datActive in dateIsNow inside Shortcode class
+
 ## version 1.1.2
 
 ### Chore
