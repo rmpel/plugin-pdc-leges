@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 1.1.4
+
+### Chore
+
+-   Replaced Composer plugin dependency check with runtime check.
+
 ## version 1.1.3
 
 ### Fix

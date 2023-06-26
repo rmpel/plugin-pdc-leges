@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Handles shortcode generation.
  */
