@@ -11,7 +11,6 @@ namespace OWC\PDC\Leges\Shortcode;
  */
 class Shortcode
 {
-
     /**
      * Default fields for leges.
      *
@@ -25,20 +24,18 @@ class Shortcode
 
     /**
      * Add the shortcode rendering.
-     *
-     * @param $attributes
-     *
-     * @return string
      */
-    public function addShortcode($attributes)
+    public function addShortcode($attributes): string
     {
-        $attributes = shortcode_atts(['id' => 0], $attributes);
+        $attributes = shortcode_atts([
+            'id' => 0
+        ], $attributes);
 
-        if (!isset($attributes['id']) || empty($attributes['id']) || ($attributes['id'] < 1)) {
+        if (! isset($attributes['id']) || empty($attributes['id']) || ($attributes['id'] < 1)) {
             return false;
         }
 
-        if (!$this->postExists($attributes['id'])) {
+        if (! $this->postExists($attributes['id'])) {
             return false;
         }
 
@@ -48,7 +45,7 @@ class Shortcode
         $newPrice = $metaData['_pdc-lege-new-price'];
         $dateActive = $metaData['_pdc-lege-active-date'];
 
-        if ($this->hasDate($dateActive) and $this->dateIsNow($dateActive)) {
+        if ($this->hasDate($dateActive) && $this->dateIsNow($dateActive)) {
             $price = $newPrice;
         }
 
@@ -95,25 +92,23 @@ class Shortcode
 
     /**
      * Readable check if date is not empty.
-     *
-     * @param $dateActive
-     *
-     * @return bool
      */
-    private function hasDate($dateActive)
+    private function hasDate($dateActive): bool
     {
-        return !empty($dateActive);
+        return ! empty($dateActive);
     }
 
     /**
      * Return true if date from lege is smaller or equal to current date.
-     *
-     * @param $dateActive
-     *
-     * @return bool
      */
-    private function dateIsNow($dateActive)
+    private function dateIsNow($dateActive): bool
     {
-        return (new \DateTime($dateActive) <= new \DateTime('now'));
+        try {
+            $dateActive = new \DateTime($dateActive);
+        } catch(\Exception $e) {
+            return false;
+        }
+
+        return $dateActive <= new \DateTime('now');
     }
 }

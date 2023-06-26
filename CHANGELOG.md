@@ -1,10 +1,16 @@
 # CHANGELOG
 
-## Version 1.1.3
+## Version 1.1.4
 
 ### Chore
 
 -   Replaced Composer plugin dependency check with runtime check.
+
+## version 1.1.3
+
+### Fix
+
+-   Validate datActive in dateIsNow inside Shortcode class
 
 ## version 1.1.2
 

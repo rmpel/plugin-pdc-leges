@@ -13,7 +13,6 @@ use OWC\PDC\Base\Foundation\Plugin as BasePlugin;
  */
 class Plugin extends BasePlugin
 {
-
     /**
      * Name of the plugin.
      *
