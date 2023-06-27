@@ -7,6 +7,7 @@
 namespace OWC\PDC\Leges\Foundation;
 
 use OWC\PDC\Base\Foundation\Plugin as BasePlugin;
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 /**
  * Sets the name and version of the plugin.

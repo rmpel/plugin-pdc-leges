@@ -40,6 +40,7 @@
     ],
     "cs": "./vendor/bin/phpcs",
     "csfix": "./vendor/bin/phpcbf",
-    "docs": "./vendor/bin/phpdoc -d ./src/Leges -t ./docs"
+    "docs": "./vendor/bin/phpdoc -d ./src/Leges -t ./docs",
+    "package": "chmod +x ./bin/package.sh && ./bin/package.sh"
   }
 }
