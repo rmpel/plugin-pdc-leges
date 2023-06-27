@@ -26,5 +26,24 @@ class Plugin extends BasePlugin
      *
      * @const string VERSION
      */
-    const VERSION = '1.1.4';
+    const VERSION = '1.2.0';
+
+    protected function checkForUpdate()
+    {
+        if (! class_exists(PucFactory::class) || $this->isExtendedClass()) {
+            return;
+        }
+
+        try {
+            $updater = PucFactory::buildUpdateChecker(
+                'https://github.com/OpenWebconcept/plugin-pdc-leges/',
+                $this->rootPath . '/pdc-leges.php',
+                self::NAME
+            );
+
+            $updater->getVcsApi()->enableReleaseAssets();
+        } catch (\Throwable $e) {
+            error_log($e->getMessage());
+        }
+    }
 }
