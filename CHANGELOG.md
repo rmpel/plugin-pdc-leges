@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## version 1.2.1
+
+### Fix
+
+-   Missing PHP extension when running GH workflows
+
 ## Version 1.2.0
 
 ### Feat

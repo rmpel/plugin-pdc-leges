@@ -15,6 +15,7 @@ jobs:
         with:
           # Lowest supported PHP version
           php_version: "7.4"
+          php_extensions: intl
       - run: composer run package
       - name: Release
         uses: fnkr/github-action-ghr@v1
