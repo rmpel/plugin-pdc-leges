@@ -10,7 +10,8 @@
   ],
   "type": "wordpress-plugin",
   "require": {
-    "php": "^7.4|^8.0"
+    "php": "^7.4|^8.0",
+    "yahnis-elsts/plugin-update-checker": "^5.1"
   },
   "require-dev": {
     "10up/wp_mock": "~0.4",
@@ -39,6 +40,7 @@
     ],
     "cs": "./vendor/bin/phpcs",
     "csfix": "./vendor/bin/phpcbf",
-    "docs": "./vendor/bin/phpdoc -d ./src/Leges -t ./docs"
+    "docs": "./vendor/bin/phpdoc -d ./src/Leges -t ./docs",
+    "package": "chmod +x ./bin/package.sh && ./bin/package.sh"
   }
 }

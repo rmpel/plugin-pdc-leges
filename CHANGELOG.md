@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 1.2.0
+
+### Feat
+
+-   Updates can now be provided through the Admin interface
+
 ## Version 1.1.4
 
 ### Chore
