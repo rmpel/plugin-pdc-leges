@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 1.2.2
+
+### Feat
+
+-   Add search box to find leges items by ID
+
 ## version 1.2.1
 
 ### Fix
