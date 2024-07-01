@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version 1.2.5
+
+- No changes. Corrects version and git tag which were out of sync.
+
+## Version 1.2.4
+
+- No changes. Corrects version and git tag which were out of sync.
+
 ## Version 1.2.3
 
 ### Fix
