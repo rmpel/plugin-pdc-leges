@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.2.1
+
+### Fixed
+
+- number_format_i18n failed when price param was not float
+
 ## 2.2.0
 
 ### Added

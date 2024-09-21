@@ -40,7 +40,7 @@ class Shortcode
         }
 
         $format = apply_filters('owc/pdc/leges/shortcode/format', '<span>&euro; %s</span>');
-        $output = sprintf($format, number_format_i18n($price, 2));
+        $output = sprintf($format, number_format_i18n((float) $price, 2));
         $output = apply_filters('owc/pdc/leges/shortcode/after-format', $output);
 
         return wp_kses_post($output) ?? '';
