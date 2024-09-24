@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.2.2
+
+### Changed
+
+- Remove ',-' from old lege prices while executing WP Cron event LegesPricesSaveFormat
+
 ## 2.2.1
 
 ### Fixed

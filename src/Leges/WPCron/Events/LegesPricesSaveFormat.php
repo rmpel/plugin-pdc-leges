@@ -83,13 +83,29 @@ class LegesPricesSaveFormat extends AbstractEvent
         $newPrice = get_post_meta($legesPost->ID, self::META_KEY_NEW_PRICE, true);
 
         if (! empty($oldPrice)) {
-            $oldPrice = str_replace(',', '.', $oldPrice);
+            $oldPrice = $this->prepareFloatSanitation($oldPrice);
             update_post_meta($legesPost->ID, self::META_KEY_OLD_PRICE, $this->sanitizeFloat($oldPrice));
         }
 
         if (! empty($newPrice)) {
-            $newPrice = str_replace(',', '.', $newPrice);
+            $newPrice = $this->prepareFloatSanitation($newPrice);
             update_post_meta($legesPost->ID, self::META_KEY_NEW_PRICE, $this->sanitizeFloat($newPrice));
         }
+    }
+
+    /**
+     * Converts a price string from a non-standard format (e.g., with commas as decimal separators
+     * or trailing currency symbols) into a sanitized format with a dot (.) as the decimal separator.
+     *
+     * This method:
+     * - Removes trailing currency indicators like ",-" from the price string.
+     * - Replaces commas (",") used as decimal separators with dots (".") for consistency.
+     */
+    protected function prepareFloatSanitation(string $price): string
+    {
+        $price = str_replace(',-', '', $price);
+        $price = str_replace(',', '.', $price);
+
+        return $price;
     }
 }
