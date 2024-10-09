@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.2.3
+
+### Fixed
+
+- Possible $page array was allowed without an ID during registration of settings pages.
+
 ## 2.2.2
 
 ### Changed
