@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.2.4
+
+### Fixed
+
+- Add prefix to deactivation function to avoid conflict.
+
 ## 2.2.3
 
 ### Fixed
