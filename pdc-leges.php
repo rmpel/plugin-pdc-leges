@@ -60,4 +60,4 @@ add_action('plugins_loaded', function () {
 /**
  * Deactivation.
  */
-register_deactivation_hook(__FILE__, 'deactivate');
+register_deactivation_hook(__FILE__, 'owc_pdc_leges_deactivate');
