@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.2.5
+
+### Fixed
+
+- Normalize price formats and handle '0.00' and '0,00' correctly in update lege prices cron event.
+
 ## 2.2.4
 
 ### Fixed
