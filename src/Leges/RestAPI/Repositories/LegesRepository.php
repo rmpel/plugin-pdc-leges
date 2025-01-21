@@ -42,13 +42,13 @@ class LegesRepository extends AbstractRepository
         /**
          * Allows adding custom CMB2 metaboxes meta values to the output of the REST API.
          */
-        return apply_filters('owc/pdc/leges/rest-api/output/extension-fields/add', $post, [
+        return apply_filters('owc/pdc/leges/rest-api/output/extension-fields/add', [
             'start_time' => get_post_meta($post->ID, '_pdc-lege-start-time', true) ?: null,
             'end_time' => get_post_meta($post->ID, '_pdc-lege-end-time', true) ?: null,
             'person_count_threshold' => get_post_meta($post->ID, '_pdc-lege-person-count-threshold', true) ?: null,
             'exception_price' => get_post_meta($post->ID, '_pdc-lege-exception-price', true) ?: null,
             'applicable_days' => $this->formatApplicableDays($post),
-        ]);
+        ], $post);
     }
 
     protected function formatApplicableDays(WP_Post $post): array

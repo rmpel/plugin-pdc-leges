@@ -148,7 +148,7 @@ add_filter('owc/pdc/leges/metabox/extension-fields/add', function($cmb, $prefix)
 ##### Add meta values of custom CMB2 metaboxes to the output of the REST API
 
 ```php
-add_filter('owc/pdc/leges/rest-api/output/extension-fields/add', function(WP_Post $post, array $output){
+add_filter('owc/pdc/leges/rest-api/output/extension-fields/add', function(array $output, WP_Post $post){
  return array_merge($output, [
   'custom-field-id' => get_post_meta($post->ID, '_pdc-lege-custom-field-id', true) ?: null
  ]);
