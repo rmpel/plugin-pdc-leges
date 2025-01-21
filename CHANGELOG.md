@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.2.6
+
+### Fixed
+
+- Apply reversed order of args in apply_filters.
+
 ## 2.2.5
 
 ### Fixed
