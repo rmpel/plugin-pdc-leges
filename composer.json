@@ -13,17 +13,12 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:OpenWebconcept/plugin-pdc-base.git"
     }
   ],
   "require": {
     "php": "^7.4|^8.0",
     "yahnis-elsts/plugin-update-checker": "^5.1",
     "johnpbloch/wordpress": "6.*",
-    "plugin/pdc-base": "3.*",
     "wp-cli/wp-cli": "2.*",
     "wpackagist-plugin/cmb2": "2.11.*"
   },
